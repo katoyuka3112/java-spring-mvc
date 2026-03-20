@@ -14,6 +14,7 @@ public class UserController {
     }
 
     @RequestMapping("/")
+
     public String getHomePage(Model model) {
         String test = this.userService.handlHello();
         model.addAttribute("erik", test);
