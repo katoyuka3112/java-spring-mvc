@@ -5,6 +5,7 @@
     <title>Document</title>
 </head>
 <body>
-    hello from jsp
+    <h1> ${eric}</h1>
+    <h2> ${hoidanit}</h2>
 </body>
 </html>
