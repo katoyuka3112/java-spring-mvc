@@ -18,15 +18,21 @@ public class UserController {
         this.userService = userService;
     }
 
-    @RequestMapping("/admin/user")
+    @RequestMapping("/")
     public String getHomepage(Model model) {
+        model.addAttribute("newUser", new User());
+        return "hello";
+    }
+
+    @RequestMapping("/admin/user")
+    public String getUserPage(Model model) {
         model.addAttribute("newUser", new User());
         return "admin/user/create";
     }
 
     @RequestMapping(value = "/admin/user/create", method = RequestMethod.POST)
-    public String getUserpage(Model model, @ModelAttribute("newUser") User hoidanit) {
-        System.out.println("UserController.getUserpage" + hoidanit);
+    public String getCreateUser(Model model, @ModelAttribute("newUser") User hoidanit) {
+        System.out.println("UserController.getCreateUser" + hoidanit);
         return "hello";
     }
 }
