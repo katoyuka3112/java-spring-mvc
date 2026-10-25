@@ -1,5 +1,6 @@
 package vn.hoidanit.laptopshop.domain;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -15,6 +16,7 @@ public class User {
     private String password;
     private String phone;
     private String address;
+    @Column(name = "full_name")
     private String fullName;
 
     
